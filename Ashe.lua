@@ -84,7 +84,7 @@ function Mode()
 end
 
 --          [[ OnProcess ]]
--- [防突进？]
+-- [防突进？gapclose?]
 OnProcessSpell(function(unit, spell)
     if GetObjectType(unit) == Obj_AI_Hero and GetTeam(unit) ~= GetTeam(myHero) and Ready(_R) then
       if CHANELLING_SPELLS[spell.name] then
