@@ -66,7 +66,7 @@ local Spells = {
  Q = {range = 600 },
  W = {range = 1200, speed = 2000, conewidth = 57.5, width = 20, col = {"minion","champion"}},
  E = {range = 10000, delay = 0.25, speed = 1400, radius = 1000},
- R = {range = 10000, delay = 0.25, speed = 1600, width = 250, , col = {"champion"}},
+ R = {range = 10000, delay = 0.25, speed = 1600, width = 250, col = {"champion"}},
 }
 --          [[ Orbwalker ]]
 function Mode()
