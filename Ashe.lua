@@ -4,7 +4,7 @@ if GetObjectName(GetMyHero()) ~= "Ashe" then return end
 --          [[ Updater ]]
 local ver = "0.01"
 
---[[function AutoUpdate(data)
+function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
         print("New version found! " .. data)
         print("Downloading update, please wait...")
@@ -12,7 +12,7 @@ local ver = "0.01"
     end
 end
 
-GetWebResultAsync("https://raw.githubusercontent.com/xuxiaoyi211/GoS/master/Version/Ashe.version", AutoUpdate)]]
+GetWebResultAsync("https://raw.githubusercontent.com/xuxiaoyi211/GoS/master/Version/Ashe.version", AutoUpdate)
 --          [[ Lib ]]
 require ("OpenPredict")
 require ("DamageLib")
