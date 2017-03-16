@@ -162,7 +162,7 @@ function Combo()
 			AsheE()
 		end]]
  --	[[ 连招 R ]]
-		if AsheMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, Spells.R.range), then
+		if AsheMenu.Combo.R:Value() and Ready(_R) and ValidTarget(target, Spells.R.range) then
 			AsheR()
 		end
 
