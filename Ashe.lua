@@ -2,7 +2,7 @@
 --          [[ Champion ]]
 if GetObjectName(GetMyHero()) ~= "Ashe" then return end
 --          [[ Updater ]]
-local ver = "0.01"
+--[[local ver = "0.01"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
@@ -12,7 +12,7 @@ function AutoUpdate(data)
     end
 end
 
-GetWebResultAsync("https://raw.githubusercontent.com/xuxiaoyi211/GoS/master/Version/Ashe.version", AutoUpdate)
+GetWebResultAsync("https://raw.githubusercontent.com/xuxiaoyi211/GoS/master/Version/Ashe.version", AutoUpdate)]]
 --          [[ Lib ]]
 require ("OpenPredict")
 require ("DamageLib")
