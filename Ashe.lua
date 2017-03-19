@@ -38,12 +38,12 @@ AsheMenu.Harass:Boolean("Q", "Use Q", true)
 AsheMenu.Harass:Boolean("W", "Use W", true)
 AsheMenu.Harass:Slider("Mana", "Min. Mana", 40, 0, 100, 1)
 --          [[ LaneClear ]]
-AsheMenu:SubMenu("LC", "LaneClear Settings")
+AsheMenu:SubMenu("Farm", "LaneClear Settings")
 AsheMenu.Farm:Boolean("Q", "Use Q", false)
 AsheMenu.Farm:Boolean("W", "Use W", true)
 AsheMenu.Farm:Slider("Mana", "Min. Mana", 40, 0, 100, 1)
 --          [[ Jungle ]]
-AsheMenu:SubMenu("JC", "Jungle Clear Settings")
+AsheMenu:SubMenu("JG", "Jungle Clear Settings")
 AsheMenu.JG:Boolean("Q", "Use Q", true)
 AsheMenu.JG:Boolean("W", "Use W", true)
 --          [[ KillSteal ]]
@@ -203,9 +203,9 @@ function Harass()
 		end
 	end
 end
-
+--          [[ LaneClear ]]
 function Farm()
-	if (Mode() == "LaneClear" then 
+	if Mode() == "LaneClear" then 
 		if(myHero.mana/myHero.maxMana >= AsheMenu.Farm.Mana:Value() /100) then
 -- 			[[ 清线 ]]
 			for _, minion in pairs(minionManager.objects) do
@@ -267,11 +267,6 @@ OnDraw(function(myHero)
 --  [[ Draw W ]]
 	if AsheMenu.Draw.W:Value() and Ready(_W) then DrawCircle(pos, Spells.W.range, 0, 25, GoS.Green) end
 end)			
-
-
-
-				
-EnemiesAround(myHero, Spells.W.range) >= LuxMenu.Combo.WMA:Value() 
 
 
 
