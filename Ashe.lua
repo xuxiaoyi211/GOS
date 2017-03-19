@@ -55,7 +55,7 @@ AsheMenu:SubMenu("Mi", "Misc Settings")
 AsheMenu.Mi:Boolean("RGC", "Use R to Gap Close", false)
 AsheMenu.Mi:Slider("RHP", "HP To R Gap Close", 45, 1, 100, 1)
 AsheMenu.Mi:Boolean("WGC", "Use W On Flee", false)
-AsheMenu.Mi:Boolean("Int", "Use R Interrupt", false)
+AsheMenu.Mi:Menu("Interrupt", "Interrupt (R)")
 --AsheMenu.Mi:Boolean("AutoE", "Auto E To Bush", false)
 --          [[ Draw ]]
 AsheMenu:SubMenu("Draw", "Drawing Settings")
